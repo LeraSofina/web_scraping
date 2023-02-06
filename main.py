@@ -54,10 +54,9 @@ for salary in vacancies:
 
 parsed = {names[i]: [links[i], company_names[i], city_names[i], salaries[i]] for i in range(len(names))}
 pprint(parsed)
-# json_data = json.load(parsed)
-# json.dump(json_data, parsed, ensure_ascii=False, indent=4)
+
 with open("hh.json", "w") as outfile:
-    json.dump(parsed, outfile)
+    json.dump(parsed, outfile, indent=4)
 
 
 
